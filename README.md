@@ -16,7 +16,7 @@
 - ` cd ` inside the `/app` directory.
 - `npm install`
 - run the server with : ` node ./app.js` or you can install `nodemon` with ` npm install -g nodemon` to monitor changes easily and then run it with `nodemon ./app.js` 
-- make mailchimp account and make the `apiKey` and your user url (look at the <a href="https://mailchimp.com/developer">mailchimp/Developer </a>document).
+- make mailchimp account and make the `apiKey` and your user url (look at the <a href="https://mailchimp.com/developer">mailchimp/Developer </a>document) and replace with the `url` and `auth` in the `app.js`.
 - Head to `localhost:3000`.
 - Signup and see the result on your chimpmail.
 
