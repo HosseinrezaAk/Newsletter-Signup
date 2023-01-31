@@ -3,6 +3,10 @@ const bodyParser = require("body-parser");
 const request = require("request");
 
 const app = express();
+/**
+ * When you imported local file to the html, express won't figure it out .
+ * so you have to make a directory like and use it like below
+ */
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
