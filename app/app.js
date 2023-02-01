@@ -32,6 +32,10 @@ app.post("/", function( req , res ){
         ]
     };
     var jsonData = JSON.stringify(data);
+
+    /**
+     * Add url and ur AUTH KEY
+     */
     const url = "";
     const options = {
         method: "POST",
