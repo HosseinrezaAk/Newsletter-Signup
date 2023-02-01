@@ -18,7 +18,33 @@ app.post("/", function( req , res ){
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
     var email = req.body.email;
-    console.log( firstName + lastName + email);
+    
+    var data = {
+        members: [
+            {
+                email_address: email,
+                status: "subscribed",
+                merge_fields:{
+                    FNAME: firstName,
+                    LNAME: lastName
+                }
+            }    
+        ]
+    };
+    var jsonData = JSON.stringify(data);
+    const url = "";
+    const options = {
+        method: "POST",
+        auth:"",
+    }
+
+    const request = https.request(url, options, function(response){
+        response.on("data", function(data){
+
+        });
+    });
+    request.write(jsonData);
+    request.end();
 });
 
 
