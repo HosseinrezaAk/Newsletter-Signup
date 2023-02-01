@@ -52,8 +52,10 @@ app.post("/", function( req , res ){
     request.end();
 });
 
-
-
-app.listen(3000, function(){
+app.get("/failure", function(){
+    res.redirect("/");
+});
+// to listen to the server port or 3000 on local machine
+app.listen( process.env.PORT || 3000, function(){
     console.log("Server started on http://localhost:3000");
 });
